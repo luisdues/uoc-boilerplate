@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+</head>
+<body>
+    <nav class="bg-gray-900">
+        <div class="container mx-auto px-4">
+          <div class="flex items-center justify-between py-4">
+            <a href="./index.html">
+              <img src="./assets/images/logo.png?width=350" alt="Logo" class="w-32">
+            </a>
+            <button class="block lg:hidden text-white hover:text-gray-300 focus:text-gray-300">
+              <span class="sr-only">Toggle navigation</span>
+              <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+            <div class="hidden lg:flex lg:items-center" id="navbarNav">
+              <ul class="flex space-x-4">
+                <li><a class="text-white hover:text-gray-300" href="./index.html">Inicio</a></li>
+                <li><a class="text-white hover:text-gray-300" href="./index.html">Sobre nosotros</a></li>
+                <li><a class="text-white hover:text-gray-300" href="./article.html">Noticias</a></li>
+                <li><a class="text-white hover:text-gray-300" href="./index.html">Contacto</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      
+      
+      </nav>
+<main class="max-w-800 mx-auto px-4 text-justify">
+    <h1 class="text-4xl font-bold mb-4">Noticia del Club de Ajedrez</h1>
+    <include src="./assets/components/noticia1.html"></include>
+</main>
+<footer class="bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="./assets/images/logo.png?width=350" alt="Logo de la página" class="img-fluid mb-3">
+            </div>
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./index.html">Sobre nosotros</a></li>
+                    <li><a href="./article.html">Noticias</a></li>
+                    <li><a href="./index.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <div class="flex">
+                    <a href="#" class="mr-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="mr-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+</html>

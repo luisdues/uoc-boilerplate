@@ -6,8 +6,11 @@
 /**
  * Import variables
  */
-
+@tailwind base;
+@tailwind components;
 @import "variables";
+
+
 
 /**
  * Import npm dependencies
@@ -24,6 +27,20 @@
  */
 
 @import "layouts/home";
+@tailwind utilities;
+
+@layer components {
+    .blockquote-style {
+      @apply border-l-4 border-blue-500 italic bg-gray-100 text-gray-700 p-4 my-4;
+    }
+  }
+  @layer components {
+    .custom-div {
+      @apply bg-white p-4 shadow;
+    }
+  }
+  
+
 
 /**
  * Do NOT include anything else in this file!

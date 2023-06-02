@@ -1,27 +1,89 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <title>Torneo de Ajedrez</title>
+</head>
+<body class="bg-gray-200 text-gray-800">
+  <nav class="bg-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <a href="./index.html">
+          <img src="./assets/images/logo.png?width=350" alt="Logo" class="w-32">
+        </a>
+        <button class="block lg:hidden text-white hover:text-gray-300 focus:text-gray-300">
+          <span class="sr-only">Toggle navigation</span>
+          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <div class="hidden lg:flex lg:items-center" id="navbarNav">
+          <ul class="flex space-x-4">
+            <li><a class="text-white hover:text-gray-300" href="./index.html">Inicio</a></li>
+            <li><a class="text-white hover:text-gray-300" href="./index.html">Sobre nosotros</a></li>
+            <li><a class="text-white hover:text-gray-300" href="./article.html">Noticias</a></li>
+            <li><a class="text-white hover:text-gray-300" href="./index.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+  </nav>
+
+  <div class="container mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Próximo torneo de Ajedrez</h1>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="custom-div">
+            <h2 class="text-lg font-bold mb-2">Fecha:</h2>
+            <p class="text-gray-800">25 de mayo, 2023</p>
+          </div>
+          
+          <div class="custom-div">
+            <h2 class="text-lg font-bold mb-2">Lugar:</h2>
+            <p class="text-gray-800">Palacio de los Deportes</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <img src="./assets/images/jugador-de-ajedrez.jpg" alt="fichas de ajedrez" class="w-full max-w-xs md:max-w-none">
+      </div>
+    </div>
+    <include src="./assets/components/caja.html"></include>
+    
+  </div>
+
+  <footer class="bg-gray-100 py-5">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+        <img src="./assets/images/logo.png?width=350" alt="Logo de la página" class="w-32 mb-3 md:mb-0">
+        <ul class="flex space-x-4">
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./index.html">Sobre nosotros</a></li>
+          <li><a href="./index.html">Noticias</a></li>
+          <li><a href="./index.html">Contacto</a></li>
+        </ul>
+        <div class="flex">
+          <a href="#" class="text-gray-700 hover:text-blue-500 mr-2">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 3.58 8 8 8s8-3.58 8-8c0-4.42-3.58-8-8-8zm0 14h-1v-3h1v3zm0-5.5c-.69 0-1.25.56-1.25 1.25v2.5c0 .69.56 1.25 1.25 1.25s1.25-.56 1.25-1.25v-2.5c0-.69-.56-1.25-1.25-1.25zm5.5 5.5h-1v-4.34c0-.34-.03-.77-.15-1.09c-.34-1.15-1.28-1.94-2.35-2.06c-.5-.06-1.88-.09-3.5-.09s-3 .03-3.5.09c-1.07.12-2.01.91-2.35 2.06c-.12.32-.15.75-.15 1.09v4.34h-1v-5.5h1V12c0-1.65.28-2.53 1.5-3.5c.81-.79 1.88-1.03 3-1.09c.34-.02.68-.03 1-.03s.66.01 1 .03c1.12.06 2.19.3 3 1.09c1.22.97 1.5 1.85 1.5 3.5v3.5h1v5.5z"></path>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-700 hover:text-purple-500 mr-2">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 5.5 4.48 10 10 10s10-4.5 10-10c0-5.52-4.48-10-10-10zm4.99 8.3c.01.13.02.26.02.4c0 3.86-2.94 8.32-8.32 8.32c-1.65 0-3.18-.48-4.47-1.31c.23.03.46.05.7.05c1.38 0 2.65-.47 3.66-1.25c-1.29-.02-2.37-.87-2.75-2.03c.45.08.9.05 1.31-.06c-1.36-.27-2.39-1.48-2.39-2.92v-.04c.4.22.86.36 1.35.37c-.8-.54-1.33-1.46-1.33-2.5c0-.55.14-1.07.38-1.52c1.39 1.7 3.46 2.82 5.8 2.94c-.04-.18-.06-.37-.06-.57c0-1.38 1.12-2.5 2.5-2.5c.72 0 1.38.3 1.84.78c.58-.12 1.13-.33 1.62-.63c-.19.6-.6 1.1-1.13 1.42c.52-.06 1.02-.2 1.49-.4c-.35.5-.8.95-1.32 1.31z"></path>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-700 hover:text-yellow-500">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10C22 6.48 17.52 2 12 2zm3.5 16.25h-7l3.5-3.51l-3.5-3.51h7v7z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
